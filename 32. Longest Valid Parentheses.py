@@ -14,4 +14,4 @@ class Solution:
         return max(dp)  
 if __name__ == "__main__":
     x=Solution()
-    print(x.longestValidParentheses("()()))))()()(())()("))
+    print(x.longestValidParentheses("()()))))()()(()("))
