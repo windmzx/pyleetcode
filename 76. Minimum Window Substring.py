@@ -6,7 +6,7 @@ class Solution:
             return ""
         # 构建两个数组 来保存字符串中字符数量
         auxt=Counter(t)
-
+        
         start,end=0, len(t) 
 
         auxs=Counter(s[start:end])
@@ -14,7 +14,7 @@ class Solution:
         minn=len(s)+1
         sstart=0
         while(end<=len(s)):
-            while(self.check(auxs,auxt)):
+            while(end-start>=len(t) and self.check(auxs,auxt)):
                 if minn > (end-start):
                     minn=  end-start 
                     sstart=start
@@ -37,4 +37,4 @@ class Solution:
         return True
 if __name__ == "__main__":
     x=Solution()
-    print(x.minWindow("a","b"))
+    print(x.minWindow("abac","ac"))
