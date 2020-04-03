@@ -9,7 +9,7 @@ class Solution:
     def pathSum(self, root: TreeNode, sum: int) -> int:
         if root is None:
             return 0
-        return self.dfs(root, sum)+pathSum(root.right, sum)+pathSum(root.left, sum)
+        return self.dfs(root, sum)+self.pathSum(root.right, sum)+self.pathSum(root.left, sum)
 
     def dfs(self, root: TreeNode, sum: int) -> int:
         if root is None:
