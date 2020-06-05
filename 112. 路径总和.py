@@ -22,7 +22,6 @@ class TreeNode:
 class Solution:
     def hasPathSum(self, root: TreeNode, sum: int) -> bool:
         
-
         def helper(root, sum):
             if root.left == None and root.right == None and sum == root.val:
                 return True
