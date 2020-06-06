@@ -24,7 +24,7 @@ class Solution:
 
     def quickSort(self,head:ListNode,end:ListNode):
         if head == end or head.next == end or head.next.next == end:
-            return head
+            return head.next
         tmphead=ListNode(-1)
         
         part=head.next
@@ -58,6 +58,6 @@ class Solution:
 
 if __name__ == "__main__":
     x=Solution()
-    head=stringToListNode("[]")
+    head=stringToListNode("[5,2,3,4,1]")
     res=x.sortList(head)
     print(x.listNodeToString(res))
